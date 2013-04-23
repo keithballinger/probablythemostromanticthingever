@@ -11,3 +11,5 @@ day 0 (0.erb, 1.erb, 2.erb, etc.).
 Keys for services are expected in config/application.yml. Currently
 using fb_[key/secret], twilio_[key/secret/to/from], typekit_key, and
 google_analytics_key.
+
+[http://probablythemostromanticthingever.com](http://probablythemostromanticthingever.com)
