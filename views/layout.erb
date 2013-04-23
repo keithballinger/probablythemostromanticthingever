@@ -1,0 +1,17 @@
+<html>
+ <head>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+  <script src="/javascripts/modernizr.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/<%= APP_CONFIG['typekit_key'] %>.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+ </head>
+ <body>
+  <img src="/images/bg.jpg" class="bg">
+  <div id="content">
+   <%= yield %>
+  </div>
+ </body>
+</html>

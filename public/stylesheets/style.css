@@ -1,0 +1,184 @@
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+.card {
+  background: url('/images/contentbg.png');
+  height: 600px;
+  width: 446px;
+}
+
+.card.top {
+  z-index: 100;
+}
+
+#content {
+  position: absolute;
+  width: 892px;
+  height: 600px;
+  top: 50%;
+  right: 50%;
+  margin-top: -300px;
+  margin-right: -446px;
+}
+
+.card.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.card-content {
+  position: relative;
+  padding: 20px
+}
+
+.card-content object {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: 130px;
+}
+
+.card .front {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  text-align: inherit;
+
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+
+  /* -- transition is the magic sauce for animation -- */
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.card.flip .front {
+  width: 100%;
+  z-index: 900;
+  background: inherit;
+
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+}
+
+.card .back {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  width: inherit;
+  height: inherit;
+  background: inherit;
+
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+
+  -moz-transform: rotateY(180deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+
+  /* -- transition is the magic sauce for animation -- */
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.card.flip .back {
+  z-index: 1000;
+
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* -- swing like a gate -- */
+.swing .front,
+.swing .back {
+  width: inherit;
+  -webkit-backface-visibility: visible;
+     -moz-backface-visibility: visible;
+  -webkit-transition-duration: 1s;
+     -moz-transition-duration: 1s;
+     -webkit-transform-origin: left center;
+}
+
+.swing .front {
+  -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
+}
+.swing .back {
+  -webkit-transform: rotateY(180deg) translateX(-446px) translateZ(2px);
+     -moz-transform: rotateY(180deg) translateX(-446px) translateZ(2px);
+}
+
+.swing.flip .front {
+  -webkit-transform: rotateY(-180deg) translateX(0px);
+     -moz-transform: rotateY(-180deg) translateX(0px);
+}
+.swing.flip .back {
+  -webkit-transform: rotateY(0deg) translateX(-443px) translateZ(2px);
+     -moz-transform: rotateY(0deg) translateX(-443px) translateZ(2px);
+}
+
+.title {
+  font-family: "ff-market-web",cursive;
+  font-size: 32px;
+  text-align: center;
+}
+
+.note {
+  font-family: "gooddog-new",cursive;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.centered {
+  text-align: center
+}
+
+.top130 {
+  padding: 130px 0 0 0;
+}
+
+a.fb-auth {
+  font-size: 18px;
+}

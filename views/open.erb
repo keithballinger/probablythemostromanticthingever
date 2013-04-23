@@ -1,0 +1,30 @@
+<div class="card right swing click top">
+ <div class="front">
+  <div class="card-content">
+   <%= erb :"partials/index" %>
+  </div>
+ </div>
+ <div class="back">
+  <div class="card-content">
+   <%= erb :"partials/left/#{@day || -1}" rescue erb :"partials/left/-1" %>
+  </div>
+ </div>
+</div>
+<div class="card right bottom">
+ <div class="card-content">
+  <%= erb :"partials/right/#{@day || -1}" rescue erb :"partials/right/-1" %>
+ </div>
+</div>
+
+<script type="text/javascript">
+ if(typeof window.history.pushState == 'function') {
+        window.history.pushState({}, "Hide", window.location.href.substr(0,window.location.href.indexOf('?')));
+ }
+
+ // set up click/tap panels
+ $(document).ready(function() {
+  $('.click').addClass('flip');
+  setTimeout(function(){$('.card.bottom').css('z-index', 999);}, 1000);
+ });
+
+</script>
