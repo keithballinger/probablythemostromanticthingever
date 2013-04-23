@@ -89,6 +89,8 @@ module Helpers
         day = (Date.today - Date.parse(date)).to_i
       end
       send_twilio_sms(user_id, day) if ENV['RACK_ENV'] == 'production'
+    else
+      redis.sadd('unauthed_user_ids', user_id)
     end
 
     return day
