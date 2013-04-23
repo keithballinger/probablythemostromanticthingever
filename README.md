@@ -12,4 +12,5 @@ Keys for services are expected in config/application.yml. Currently
 using fb_[key/secret], twilio_[key/secret/to/from], typekit_key, and
 google_analytics_key.
 
-[http://probablythemostromanticthingever.com](http://probablythemostromanticthingever.com)
+<a href="http://probablythemostromanticthingever.com"
+target="_blank">http://probablythemostromanticthingever.com </a>
